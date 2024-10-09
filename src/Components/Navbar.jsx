@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Logo from "/src/assets/TBL_Logo.png";
-import { BiSearch } from "react-icons/bi";
+import { BiBook, BiInfoCircle, BiPhone, BiSearch } from "react-icons/bi";
 import { RxAvatar } from "react-icons/rx";
+import { FaBell } from "react-icons/fa";
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
             <section className="mx-auto flex max-w-7xl items-center justify-between p-4">
                 {/* Logo */}
                 <a href="">
-                    <img src={Logo} alt="Logo" className="w-24 md:w-36" />
+                    <img src={Logo} alt="Logo" className="w-24 md:w-30" />
                 </a>
 
                 <div>
@@ -30,7 +31,7 @@ const Navbar = () => {
                             }`}
                         ></div>
                         <div
-                            className={`absolute top-4 h-1 w-8 rounded bg-black transition-all duration-500 ${
+                            className={`absolute top-9 left-2 h-1 w-6 rounded bg-black transition-all duration-500 ${
                                 isMobileMenuOpen ? "opacity-0" : ""
                             }`}
                         ></div>
@@ -78,18 +79,30 @@ const Navbar = () => {
                     </div>
 
                     {/* Other Links */}
-                    <a href="#" className="w-full py-4 text-center hover:opacity-90">
-                        Bookstore
-                    </a>
-                    <a href="#" className="w-full py-4 text-center hover:opacity-90">
-                        Events
-                    </a>
-                    <a href="#" className="w-full py-4 text-center hover:opacity-90">
-                        About
-                    </a>
-                    <a href="#" className="w-full py-4 text-center hover:opacity-90">
-                        Contact
-                    </a>
+                    <div className="mt-8 flex items-center space-x-4">
+                        <BiBook className="inline-block text-2xl" size={30}/>
+                        <a href="#" className="w-full py-4 text-center hover:opacity-90">
+                            Bookstore
+                        </a>
+                    </div>
+                    <div className="mt-8 flex items-center space-x-4">
+                        <BiInfoCircle className="inline-block text-2xl" size={30}/>
+                        <a href="#" className="w-full py-4 text-center hover:opacity-90">
+                            About
+                        </a>
+                    </div>
+                    <div className="mt-8 flex items-center space-x-4">
+                        <FaBell className="inline-block text-2xl" size={30}/>
+                        <a href="#" className="w-full py-4 text-center hover:opacity-90">
+                            Events
+                        </a>
+                    </div>
+                    <div className="mt-8 flex items-center space-x-4">
+                        <BiPhone className="inline-block text-2xl"size={30} />
+                        <a href="#" className="w-full py-4 text-center hover:opacity-90">
+                            Contacts
+                        </a>
+                    </div>
                 </nav>
             </section>
         </header>
