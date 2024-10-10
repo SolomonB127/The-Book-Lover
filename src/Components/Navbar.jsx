@@ -3,6 +3,7 @@ import Logo from "/src/assets/TBL_Logo.png";
 import { BiBook, BiInfoCircle, BiPhone, BiSearch } from "react-icons/bi";
 import { RxAvatar } from "react-icons/rx";
 import { FaBell } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,9 +16,9 @@ const Navbar = () => {
         <header className="sticky top-0 z-50 bg-white">
             <section className="mx-auto flex max-w-7xl items-center justify-between p-4">
                 {/* Logo */}
-                <a href="">
+                <Link to="/">
                     <img src={Logo} alt="Logo" className="md:w-30 w-24" />
-                </a>
+                </Link>
 
                 <div>
                 {/* Hamburger Button */}
@@ -47,13 +48,13 @@ const Navbar = () => {
                         aria-label="main"
                         className="text-l ml-20 hidden items-center space-x-8 font-semibold md:flex"
                     >
-                        <a href="#">Bookstore</a>
-                        <a href="#">About</a>
-                        <a href="#">Contact</a>
-                        <a href="#">Login</a>
-                        <a href="#">
-                        <BiSearch className="inline-block text-xl" />
-                        </a>
+                        <Link to="/">Bookstore</Link>
+                        <Link to="/">About</Link>
+                        <Link to="/">Contact</Link>
+                        <Link to="/">Login</Link>
+                        <Link to="/">
+                            <BiSearch className="inline-block text-xl" />
+                        </Link>
                     </nav>
                 </div>
             </section>
@@ -79,35 +80,35 @@ const Navbar = () => {
                     {/* Mobile Avatar + Bookstore */}
                     <div className="mr-40 flex justify-start space-x-3 py-4 font-medium">
                         <RxAvatar className="text-3xl" />
-                        <a href="#" className="text-center hover:opacity-90">
+                        <Link to="/" className="text-center hover:opacity-90">
                         Login
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Other Links */}
                     <div className="mt-8 flex items-center space-x-4">
                         <BiBook className="inline-block text-2xl" size={30} />
-                        <a href="#" className="w-full py-4 text-center hover:opacity-90">
-                        Bookstore
-                        </a>
+                        <Link to="/" className="w-full py-4 text-center hover:opacity-90">
+                            Bookstore
+                        </Link>
                     </div>
                     <div className="mt-8 flex items-center space-x-4">
                         <BiInfoCircle className="inline-block text-2xl" size={30} />
-                        <a href="#" className="w-full py-4 text-center hover:opacity-90">
-                        About
-                        </a>
+                        <Link to="/" className="w-full py-4 text-center hover:opacity-90">
+                            About
+                        </Link>
                     </div>
                     <div className="mt-8 flex items-center space-x-4">
                         <FaBell className="inline-block text-2xl" size={30} />
-                        <a href="#" className="w-full py-4 text-center hover:opacity-90">
-                        Events
-                        </a>
+                        <Link to="/" className="w-full py-4 text-center hover:opacity-90">
+                            Events
+                        </Link>
                     </div>
                     <div className="mt-8 flex items-center space-x-4">
                         <BiPhone className="inline-block text-2xl" size={30} />
-                        <a href="#" className="w-full py-4 text-center hover:opacity-90">
-                        Contacts
-                        </a>
+                        <Link to="/" className="w-full py-4 text-center hover:opacity-90">
+                            Contacts
+                        </Link>
                     </div>
                 </nav>
             </section>
